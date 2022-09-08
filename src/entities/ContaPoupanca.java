@@ -4,7 +4,6 @@ import entities.exceptions.BankException;
 
 public class ContaPoupanca extends Contas {
 	
-	
 	public ContaPoupanca() {
 		super();
 	}

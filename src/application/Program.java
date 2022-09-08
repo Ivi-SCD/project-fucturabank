@@ -53,13 +53,11 @@ public class Program {
 				System.out.print("=>> ");
 				num = sc.nextInt();
 				
-				ContaPoupanca cother = new ContaPoupanca("Lucas", 2323);
-				
 				switch(num) {
 					case 1:
 						System.out.print("Quanto você deseja aplicar? ");
 						double valaplicacao = sc.nextDouble();
-						cc.aplicar(valaplicacao, cother);
+						cc.aplicar(valaplicacao, cp);
 						break;
 					case 2:
 						System.out.print("Quanto você deseja resgatar? ");
@@ -80,8 +78,6 @@ public class Program {
 						break;
 				}
 			}
-			
-			
 			System.out.println("Detalhes das contas: ");
 			System.out.println(cc.saldoTotalString(cp));
 			sc.close();
