@@ -57,9 +57,9 @@ public class ContaCorrente extends Contas {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Número: " + numeroacc);
 		sb.append("\nTitular: " + titular);
-		sb.append("\nSaldo Total: " + (saldo + cp.getSaldo()));
-		sb.append("\nSaldo Conta Corrente:" + saldo);
-		sb.append("\nSaldo Conta Poupança: " + cp.getSaldo());
+		sb.append("\nSaldo Total: $" + String.format("%.2f", + saldo + cp.getSaldo()));
+		sb.append("\nSaldo Conta Corrente: $" + String.format("%.2f", + saldo));
+		sb.append("\nSaldo Conta Poupança: $" + String.format("%.2f", + cp.getSaldo()));
 		return sb.toString();
 		
 	}

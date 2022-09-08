@@ -21,7 +21,7 @@ public class ContaPoupanca extends Contas {
 		else {
 			saldo -= val;
 			acc.saldo += val;
-			System.out.println("Resgatado o valor de $" + val + " para a conta corrente.");
+			System.out.println("Resgatado o valor de $" + val + " para a conta corrente.\n");
 		}
 	}
 
@@ -34,9 +34,9 @@ public class ContaPoupanca extends Contas {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Número: " + numeroacc);
 		sb.append("\nTitular: " + titular);
-		sb.append("\nSaldo Total: " + cc.getSaldo() + saldo);
-		sb.append("\nSaldo Conta Corrente: " + cc.getSaldo());
-		sb.append("\nSaldo Conta Poupança: " + saldo);
+		sb.append("\nSaldo Total: $" + String.format("%.2f", cc.getSaldo() + saldo));
+		sb.append("\nSaldo Conta Corrente: $" + String.format("%.2f", cc.getSaldo()));
+		sb.append("\nSaldo Conta Poupança: $" + String.format("%.2f", saldo));
 		return sb.toString();
 	}
 }
