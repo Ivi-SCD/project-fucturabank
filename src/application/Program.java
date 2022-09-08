@@ -32,6 +32,7 @@ public class Program {
 				System.out.print("Digite valor do depósito inicial: ");
 				double valdeposit = sc.nextDouble();
 				
+				
 				cc = new ContaCorrente(nome, numeroacc, valdeposit);
 				cp = new ContaPoupanca(nome, numeroacc);
 			}
@@ -46,7 +47,7 @@ public class Program {
 			while(num != 5) {
 				System.out.println("Qual procedimento você deseja realizar: ");
 				System.out.println("1. Aplicação de valores na conta poupança. ");
-				System.out.println("2. Resgate de valores da conta poupança para corrente. ");
+				System.out.println("2. Resgate de valores da conta poupança para conta corrente. ");
 				System.out.println("3. Deposito. (Inválido a operação de depositar diretamente na conta poupança.)");
 				System.out.println("4. Saque. ");
 				System.out.println("5. Sair. ");

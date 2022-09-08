@@ -10,6 +10,7 @@ public class ContaCorrente extends Contas {
 	
 	public ContaCorrente( String titular, Integer numeroacc) {
 		super(titular, numeroacc);
+		this.saldo = 0.0;
 	}
 
 	public ContaCorrente(String titular, Integer numeroacc, Double saldo) {
@@ -30,6 +31,10 @@ public class ContaCorrente extends Contas {
 	public void aplicar(double valor, ContaPoupanca cp) {
 		if(cp.getTitular() != titular || cp.getNumeroAcc() != numeroacc) {
 			throw new BankException("Aplicação impossível. Números ou titulares distintos.");
+		}
+		
+		if(valor > saldo) {
+			throw new BankException("Aplicação impossível. Valor superior ao saldo disponível.");
 		}
 		else {
 			if(cp.saldo == null)
