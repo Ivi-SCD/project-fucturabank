@@ -11,8 +11,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		ContaCorrente cc;
-		ContaPoupanca cp;
-	
+		ContaPoupanca cp;	
+		
 		Locale.setDefault(Locale.US);
 		
 		try {
@@ -27,11 +27,9 @@ public class Program {
 			System.out.print("Será feito um depósito inicial? (s/n) ");
 			char carac = sc.next().charAt(0);
 			
-			
 			if (carac == 's') {
 				System.out.print("Digite valor do depósito inicial: ");
 				double valdeposit = sc.nextDouble();
-				
 				
 				cc = new ContaCorrente(nome, numeroacc, valdeposit);
 				cp = new ContaPoupanca(nome, numeroacc);

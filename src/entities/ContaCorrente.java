@@ -10,7 +10,7 @@ public class ContaCorrente extends Contas {
 	
 	public ContaCorrente( String titular, Integer numeroacc) {
 		super(titular, numeroacc);
-		this.saldo = 0.0;
+		saldo = 0.0;
 	}
 
 	public ContaCorrente(String titular, Integer numeroacc, Double saldo) {
@@ -66,6 +66,5 @@ public class ContaCorrente extends Contas {
 		sb.append("\nSaldo Conta Corrente: $" + String.format("%.2f", + saldo));
 		sb.append("\nSaldo Conta Poupança: $" + String.format("%.2f", + cp.getSaldo()));
 		return sb.toString();
-		
 	}
 }

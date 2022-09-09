@@ -13,10 +13,12 @@ public class ContaPoupanca extends Contas {
 		saldo = 0.0;
 	}
 
-
 	public void resgatar(double val, ContaCorrente acc) {
 		if(acc.getTitular() != titular || acc.getNumeroAcc() != numeroacc) {
 			throw new BankException("Resgate impossível. Números ou titulares distintos.");
+		}
+		if (val > saldo) {
+			throw new BankException("Resgate impossível. Valor superior ao saldo.");
 		}
 		else {
 			saldo -= val;
