@@ -3,7 +3,11 @@ package entities;
 import entities.exceptions.BankException;
 
 public class ContaCorrente extends Contas {
-	
+	/*
+	 * @author: Ivisson Pereira
+	 * Foi feita a criação de exceções para casos irreais de aplicação/resgate/saque/depósito
+	 * e para também, invalidar a tentativa de transferência de valores para contas distintas [!]
+	 */
 	public ContaCorrente() {
 		super();
 	}

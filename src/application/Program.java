@@ -17,7 +17,8 @@ public class Program {
 		
 		try {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("###### Criação da conta ######");
+			System.out.println("     [!] FUCTURA BANK [!]");
+			System.out.println("=-=-=- Criação da conta -=-=-=");
 			System.out.print("Digite o seu nome: ");
 			String nome = sc.nextLine();
 			
@@ -39,10 +40,11 @@ public class Program {
 				cp = new ContaPoupanca(nome, numeroacc);
 			}
 			
-			System.out.println("################################\n");
-			
+			System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 			int num = 0;
 			while(num != 5) {
+				System.out.println("[Titular: " + cc.getTitular() + " | Saldo: " + String.format("%.2f", cc.getSaldo() + cp.getSaldo()) + "]");
+				System.out.println("[!] Olá <" + cc.getTitular() +">, Seja bem vindo ao menu Fuctura Bank!! [!]");
 				System.out.println("Qual procedimento você deseja realizar: ");
 				System.out.println("1. Aplicação de valores na conta poupança. ");
 				System.out.println("2. Resgate de valores da conta poupança para conta corrente. ");
@@ -77,8 +79,10 @@ public class Program {
 						break;
 				}
 			}
+			System.out.println("__________________________________");
 			System.out.println("Detalhes das contas: ");
 			System.out.println(cc.saldoTotalString(cp));
+			System.out.println("__________________________________");
 			sc.close();
 		}
 		catch (BankException e) {
