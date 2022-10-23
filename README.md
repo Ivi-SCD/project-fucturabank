@@ -1,26 +1,21 @@
-## Projeto-FucturaBank
+# Project Bank using O.O.P concepts 
 
-- O projeto terá uma classe para Conta Corrente e uma classe para Conta
-Poupança que herdará da classe abstrata Contas;
-- A classe Contas deverá ter os atributos: **número da conta, nome do titular,
-saldo disponível** e ter *métodos para exibir os dados da conta cadastrada,
-fazer depósito, exibir o saldo de cada conta e métodos getters e setters dos
-atributos private*;
-- A ContaCorrente além dos métodos herdados terá *método para fazer
-saques e para aplicação de valores na ContaPoupança*;
-- A Conta Poupança além dos métodos herdados terá o *método resgatar
-que transfere valores da Poupança para ContaCorrente*;
-- Deverá ter **confirmação para cada operação realizada**. Por exemplo:
-ao realizar um saque informar que o saque foi feito;
-- **O projeto precisa de uma classe que possua o método main. Nesta classe
-será feita a criação de objetos, as chamadas aos métodos, atribuição de
-valores aos atributos.**
+[![LICENSE](https://img.shields.io/github/license/Ivi-SCD/project-fucturabank)](https://github.com/Ivi-SCD/project-fucturabank/blob/main/license)
 
-## Observações
-* O atributo saldo não deverá ser alterado diretamente, deverá
-ser criado um método para manipular o atributo saldo.
-* A primeira ação que deverá ser feito é cadastrar a conta. Tem que
-ser solicitado ao usuário digitar o seu nome, um número de conta (esse número
-é aleatório, somente para a conta ter um número quando for mostrar os dados da conta). Ainda no cadastro deverá ser perguntado se será feito um depósitoinicial. A ContaCorrente poderá ser criada com saldo R$ 0.00 (zero) ou com o
-valor de depósito inicial.
-* A Poupança não aceitará saques e depósitos diretamente, para depositar ou sacar dinheiro da ContaPoupança será utilizado os métodos *aplicar() e resgatar()* respectivamente.
+## About the project:
+This is a simple project of module 1 from course Fuctura (Academia Java Full Stack) 
+using only Java and your concepts of **interfaces, exception treatment,
+abstract classes/methods and the three pillars of OOP**. The project was made 
+to simulate the creation of bank accounts and your interactions each other
+
+## Execute the project:
+You need to have Java (Any version) installed and configured locally.
+
+* Open a folder that you will put the project.
+* Open your git bash and init your git.
+* Execute the following command to clone repository: 
+```bash
+# Cloning repository
+git clone https://github.com/Ivi-SCD/project-fucturabank
+```
+* At last, open the `fucturabank` in your IDE as a Java project and execute it.
